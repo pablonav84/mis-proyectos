@@ -1,0 +1,29 @@
+.Nav-container {
+    
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: brown;
+   
+}
+
+.navbar-logo {
+    justify-self: start;
+    margin-left: 150px;
+    border-radius: 100px;
+    width: 90px;
+    height: 90px;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+.bg-style {
+    background-color: brown;
+    
+}

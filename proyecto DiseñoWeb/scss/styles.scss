@@ -1,0 +1,818 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../fuente/Roboto_Condensed/RobotoCondensed-Light.ttf");
+}
+@font-face {
+  font-family: "russo one";
+  src: url("../fuente/Russo_One/RussoOne-Regular.ttf");
+}
+$naranja: rgb(250, 157, 35);
+$titulo: "Russo One", sans-serif;
+$subtitulo: "roboto condensed", sans-serif;
+@mixin align-color {
+  text-align: center;
+  color: white;
+}
+@mixin background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@mixin conf-galeria-queries {
+  width: 290px;
+  height: 240px;
+  border: 2px solid white;
+  border-radius: 5%;
+}
+@keyframes efecto__girar {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  35% {
+    transform: rotate(120deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(240deg);
+  }
+  75% {
+    transform: rotate(280deg);
+  }
+  85% {
+    transform: rotate(320deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.nav-item {
+  padding-right: 80px;
+}
+.nav-link:hover {
+  color: red !important;
+}
+html,
+body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+/*estilo pagina error 404*/
+.error {
+  @include background;
+  text-align: center;
+  .error-img {
+    height: 740px;
+  }
+}
+/*inicio estilo footer*/
+.footer {
+  align-content: center;
+  background-color: black;
+  height: 200px;
+  margin-top: 10px;
+  display: grid;
+  grid-template-areas:
+    "h3 h3"
+    "img lista"
+    "nombre lista";
+  grid-template-rows: 15% 40% 15%;
+  grid-template-columns: 30% 70%;
+  .footer__h3 {
+    align-self: center;
+    justify-self: center;
+    grid-area: h3;
+    font-family: $titulo;
+    color: white;
+  }
+  .footer__img {
+    align-self: center;
+    justify-self: center;
+    grid-area: img;
+
+    .footer__img-link {
+      width: 80px;
+    }
+  }
+  .footer__nombre {
+    align-self: start;
+    justify-self: center;
+    grid-area: nombre;
+    .footer__nombre-h5 {
+      font-family: $subtitulo;
+      color: white;
+    }
+  }
+  .footer__lista {
+    grid-area: lista;
+    align-self: center;
+    text-align: center;
+    .footer__lista-a {
+      margin-left: 110px;
+      margin-right: 110px;
+      display: inline;
+    }
+  }
+}
+.footer a {
+  text-decoration: none;
+  align-self: center;
+  justify-self: center;
+  font-family: $titulo;
+  color: white !important;
+}
+/*fin estilo footer*/
+
+/*inicio estilo index*/
+.inicio {
+  display: relative;
+  background-image: url("../imagenes/Sin-nombre.jpg");
+  margin-top: 10px;
+  height: 850px;
+  @include background;
+  .inicio__h1 {
+    font-family: $titulo;
+    @include align-color;
+    font-size: 140px;
+    padding-top: 150px;
+  }
+}
+.noticias__a {
+  position: absolute;
+  top: 0px;
+  background-color: black;
+  width: 600px;
+  transform: translate(200px, 650px);
+  border: 5px dashed red;
+  text-decoration: none;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+  &.noticias__a:hover {
+    animation-name: none;
+  }
+  .noticias__h2 {
+    @include align-color;
+    font-size: 50px;
+  }
+}
+.noticias__h3 {
+  @include align-color;
+  font-size: 40px;
+}
+.inicio__box {
+  position: absolute;
+  top: 0px;
+  margin-left: 1450px;
+  margin-top: 700px;
+  .inicio__img {
+    border: 5px solid red;
+    border-radius: 50%;
+    width: 110px;
+    height: 105px;
+  }
+}
+.titulo {
+  background-image: url("../imagenes/20765.jpg");
+  height: 1050px;
+  @include background;
+  .titulo__h1 {
+    padding-top: 10px;
+    margin-top: 10px;
+    @include align-color;
+    font-size: 70px;
+    font-family: $subtitulo;
+  }
+  .titulo__p {
+    color: white;
+    font-size: 25px;
+    text-align: justify;
+    margin: 70px 70px;
+  }
+  .titulo__discos {
+    font-family: $subtitulo;
+    @include align-color;
+    margin-top: 100px;
+    .titulo__h2 {
+      font-size: 50px;
+    }
+    .tabla {
+      font-size: 25px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      .tabla__columna {
+        border: 1px solid white;
+        padding: 5px;
+      }
+    }
+  }
+}
+.multimedia {
+  margin-top: 10px;
+  padding: 50px;
+  background-image: url("../imagenes/audience-band-concert-crowd-wallpaper-preview.jpg");
+  height: 100%;
+  @include background;
+  .multimedia__h2 {
+    font-family: $subtitulo;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    background-color: brown;
+    width: 100%;
+    height: 60px;
+    padding-top: 10px;
+  }
+  .galeria {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(2, 300px);
+    justify-content: center;
+    align-content: center;
+    grid-template-areas:
+      "arte vivo indio varias"
+      "arte ensayo ensayo varias";
+    .tile {
+      height: 100%;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    .tile .back {
+      font-family: $titulo;
+      font-size: 50px;
+    }
+    .tile a {
+      text-decoration: none;
+    }
+    .tile .front {
+      height: 100%;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+    .galeria__arte .front {
+      background-image: url(../imagenes/galeria/arte/arte2.jpg);
+      @include background;
+    }
+    .galeria__vivo .front {
+      background-image: url(../imagenes/galeria/vivo/vivo.jpg);
+      @include background;
+    }
+    .galeria__varias .front {
+      background-image: url(../imagenes/galeria/varias/foto2.jpg);
+      @include background;
+    }
+    .galeria__ensayo .front {
+      background-image: url(../imagenes/galeria/ensayos/ensayo4.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .galeria__indio .front {
+      background-image: url(../imagenes/galeria/indio/indioenvivo1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+    .tile .back {
+      background-color: #241561;
+      color: white;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      height: 100%;
+    }
+    .tile:hover .front {
+      margin-top: -100%;
+    }
+    .galeria__varias:hover .front {
+      margin-top: -200%;
+    }
+    .galeria__arte:hover .front {
+      margin-top: -200%;
+    }
+    .galeria__ensayo:hover .front {
+      margin-top: -50%;
+    }
+    .galeria__arte {
+      grid-area: arte;
+    }
+    .galeria__varias {
+      grid-area: varias;
+    }
+    .galeria__ensayo {
+      grid-area: ensayo;
+    }
+    .galeria__vivo {
+      grid-area: vivo;
+    }
+    .galeria__indio {
+      grid-area: indio;
+    }
+  }
+}
+.multimedia__videos {
+  text-align: center;
+  .multimedia__link {
+    margin-top: 20px;
+    padding: 0px 70px 0px 70px;
+  }
+}
+/*fin estilo index*/
+
+/*inicio estilo registro*/
+.formulario {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  background-image: url("../imagenes/165336_1659447266_120.jpg");
+  @include background;
+  height: 800px;
+  align-items: center;
+  .formulario_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .formulario__h2 {
+      font-family: $titulo;
+      font-size: 40px;
+      background-color: rgba(114, 27, 27, 0.767);
+      text-align: center;
+      width: 600px;
+      color: white;
+      margin-top: 20px;
+    }
+    .formulario__fieldset {
+      text-align: center;
+      color: white;
+      margin: 0px 50px 0px 50px;
+      width: 600px;
+      background-image: radial-gradient(
+        ellipse 300px 150px,
+        rgb(255, 186, 58),
+        rgba(73, 3, 3, 0.671)
+      );
+      .formulario__login {
+        padding-top: 10px;
+      }
+    }
+    .formulario__botones {
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+  .formulario_imagen-img {
+    width: 500px;
+    height: 600px;
+    margin-right: 200px;
+  }
+}
+
+/*fin estilo registro*/
+
+/*inicio estilo discografia*/
+.discografia {
+  background-image: url("../imagenes/fondo_discografia.png");
+  @include background;
+  height: 100%;
+}
+.discografia__titulo {
+  font-family: $titulo;
+  @include align-color;
+  font-size: 70px;
+  border: 5px solid $naranja;
+}
+.discografia__subtitulo {
+  font-family: $subtitulo;
+  padding: 50px 0 10px 80px;
+  color: white;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 5px solid black;
+  background-color: white;
+  .content__discos {
+    display: flex;
+    justify-self: center;
+    .discos__img {
+      width: 400px;
+      height: 400px;
+      border: 5px solid $naranja;
+      &.discos__img:hover {
+        animation-name: efecto__girar;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+      }
+    }
+  }
+  .content__lista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 250px;
+    margin-top: 20px;
+    .content__ol {
+      padding: 0px;
+      .content__li a {
+        font-size: 15px;
+        color: black;
+      }
+    }
+  }
+  .content__botones {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    .content__h2 {
+      font-family: $titulo;
+    }
+    .content__logos {
+      padding-right: 30px;
+      .content__enlace {
+        filter: grayscale(1);
+        transition: all 0.6s ease;
+        &.content__enlace:hover {
+          filter: grayscale(0);
+          transition: all 0.8s ease;
+        }
+      }
+      .content__logo {
+        margin-left: 20px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  .content__boton {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .content__boton-conf {
+      margin-bottom: 50px;
+    }
+  }
+}
+/*fin estilo discografia*/
+
+/*inicio estilo tienda*/
+.tienda__h1 {
+  font-family: $titulo;
+  font-size: 50px;
+  text-align: center;
+}
+.tienda__imagen {
+  width: 300px;
+  height: 400px;
+}
+.padding {
+  padding-top: 10px;
+}
+/*fin estilo tienda*/
+
+/*inicio estilo galeria de fotos*/
+.galeria__content {
+  background-image: url(../imagenes/audience-band-concert-crowd-wallpaper-preview.jpg);
+  @include background;
+  margin-top: 10px;
+}
+.img__arte {
+  width: 600px;
+  height: 900px;
+  border: 2px solid white;
+  border-radius: 5%;
+  margin-left: 550px;
+}
+.img__vivo {
+  width: 1600px;
+  height: 900px;
+  border: 2px solid white;
+  border-radius: 5%;
+}
+.img__indio {
+  @extend .img__vivo;
+}
+.img__ensayos {
+  @extend .img__vivo;
+}
+.img__varias {
+  @extend .img__vivo;
+}
+.boton-back {
+  margin-left: 20px;
+}
+.boton-next {
+  width: 100px;
+}
+.section__volver {
+  background-color: rgb(15, 15, 15);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .section__img {
+    color: white;
+    width: 50px;
+    height: 50px;
+  }
+  .section__a {
+    font-family: $titulo;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+  }
+}
+/*fin estilo galeria de fotos*/
+
+/*-----------media queries-----------*/
+@media (max-width: 991px) {
+  /*estilo pagina error 404 media queries*/
+  .error {
+    height: 670px;
+    .error-img {
+      overflow-x: hidden;
+      transform: translate(-215px, 120px);
+      position: relative;
+      width: 850px;
+      height: 450px;
+    }
+  }
+  /*inicio estilo navbar media queries*/
+  #burguer {
+    justify-content: space-around;
+  }
+  /*inicio estilo footer media queries*/
+  .footer {
+    height: 135px;
+    padding: 5px;
+    display: grid;
+    grid-template-areas:
+      "mapa mapa"
+      "img lista";
+    grid-template-rows: 30% 70%;
+    grid-template-columns: 50% 50%;
+    .footer__img {
+      grid-area: img;
+      .footer__img-link {
+        width: 50px;
+        margin-left: 0px;
+      }
+    }
+    .footer__h3 {
+      text-align: center;
+      grid-area: mapa;
+    }
+    .footer a {
+      text-align: center;
+      grid-area: mapa;
+    }
+    .footer__lista {
+      grid-area: lista;
+    }
+  }
+  .footer__nombre {
+    display: none;
+  }
+  .footer__h3 {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .footer__lista-ul {
+    margin: 0px;
+    padding: 0px;
+    .footer__lista-a {
+      display: block;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+  /*fin estilo footer media queries*/
+
+  /*inicio estilo index media queries*/
+  .inicio {
+    width: 100%;
+    height: 600px;
+    .inicio__h1 {
+      font-size: 50px;
+      padding-top: 130px;
+    }
+    .noticias__a {
+      position: absolute;
+      top: 0px;
+      width: 340px;
+      transform: translate(35px, 350px);
+      .noticias__h2 {
+        font-size: 40px;
+      }
+      .noticias__h3 {
+        font-size: 25px;
+      }
+    }
+  }
+  .inicio__box {
+    margin-left: 45%;
+    margin-top: 600px;
+    .inicio__img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  .titulo {
+    height: 2100px;
+    .titulo__h1 {
+      font-size: 40px;
+      text-align: center;
+    }
+    .titulo__p {
+      margin: 20px 40px 0px 40px;
+      font-size: 20px;
+    }
+    .titulo__discos {
+      margin: 30px 40px 20px 40px;
+      .titulo__h2 {
+        font-size: 25px;
+      }
+      .tabla {
+        font-size: 15px;
+      }
+    }
+  }
+  .multimedia {
+    height: 100%;
+    .multimedia__fotos {
+      text-align: center;
+    }
+    .multimedia__h2 {
+      font-size: 30px;
+    }
+    .galeria {
+      padding: 10px;
+      background-color: #241561;
+      display: grid;
+      grid-template-columns: repeat(2, 190px);
+      grid-template-rows: repeat(3, 200px);
+      justify-content: center;
+      align-content: stretch;
+      grid-template-areas:
+        "arte vivo"
+        "arte indio"
+        "ensayo varias";
+      .tile .back {
+        font-size: 25px;
+      }
+      .galeria__arte:hover .front {
+        margin-top: -211%;
+      }
+      .galeria__vivo:hover .front {
+        margin-top: -106%;
+      }
+      .galeria__indio:hover .front {
+        margin-top: -106%;
+      }
+      .galeria__varias:hover .front {
+        margin-top: -106%;
+      }
+      .galeria__ensayo:hover .front {
+        margin-top: -110%;
+      }
+    }
+  }
+  .multimedia__videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .multimedia__link {
+      margin-top: 15px;
+      padding: 0px;
+      width: 280px;
+      height: 150px;
+    }
+  }
+  /*fin estilo index media queries*/
+
+  /*inicio estilo registro media queries*/
+  .formulario {
+    padding-top: 20px;
+    height: 800px;
+    .formulario_imagen {
+      display: none;
+    }
+    .formulario__fieldset {
+      width: 400px;
+      .formulario__login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+    }
+  }
+  .datos {
+    width: 300px;
+  }
+  /*fin estilo registro media queries*/
+
+  /*inicio estilo tienda media queries*/
+  .tienda__h1 {
+    font-size: 30px;
+  }
+  /*fin estilo tienda media queries*/
+
+  /*inicio estilo discografia media queries*/
+  .discografia__titulo {
+    font-size: 50px;
+  }
+  .discografia__subtitulo {
+    padding-left: 0px;
+    text-align: center;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .discos__img {
+      width: 300px;
+      height: 300px;
+    }
+    .content__lista {
+      padding: 0px;
+      border-bottom: 2px solid;
+    }
+    .content__logos {
+      display: flex;
+      flex-direction: row;
+      padding-right: 40px;
+    }
+    .content__boton {
+      margin-top: 20px;
+    }
+    .content__boton-conf {
+      margin: 0px;
+    }
+  }
+  /*fin estilo discografia media queries*/
+
+  /*inicio estilo galeria de fotos media queries*/
+  .galeria__content {
+    height: 600px;
+    .img__arte {
+      width: 290px;
+      height: 500px;
+      border: 2px solid white;
+      border-radius: 5%;
+      margin-left: 0px;
+    }
+    .img__vivo {
+      @include conf-galeria-queries;
+    }
+    .img__indio {
+      @include conf-galeria-queries;
+    }
+    .img__ensayos {
+      @include conf-galeria-queries;
+    }
+    .img__varias {
+      @include conf-galeria-queries;
+    }
+    .boton-back {
+      margin-left: 10px;
+    }
+    .boton-next {
+      width: 50px;
+    }
+  }
+  .slider__padding {
+    padding-top: 170px;
+  }
+}
+/*fin estilo galeria de fotos media queries*/
+/*fin estilo*/

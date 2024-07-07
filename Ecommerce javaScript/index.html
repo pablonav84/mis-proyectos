@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Sabor Urbano</title>
+    <link rel="shorcut icon" href="imagenes/sabor_urbano.png" />
+    <link rel="stylesheet" href="./css/bootstrap.css"/>
+</head>
+<body>
+    
+    <!--NavBar-->
+    <div class="nav-container">
+        <nav class="navbar">
+            <img src="./imagenes/sabor_urbano.png" class="nav_logo">
+            <h1 class="inicio_sesion" id="inicioSesion">👤</h1>
+            <h1 class="ver-carrito" id="verCarrito">🛒</h1>
+        </nav>
+    </div>
+
+    <!--Inputs-->
+<div id="input" class="input"></div>
+
+    <!--Welcome-->
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3500">
+            <img src="./imagenes/portada.jpg" class="tamaño d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="./imagenes/portada2.jpg" class="tamaño d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="./imagenes/portada3.jpg" class="tamaño d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <!--Food content-->
+     <div id="foodcontent" class="food-content"></div>
+
+     <!--carrito container-->
+     <div id="carritoContainer" class="carrito-container"></div>
+
+     <script src="./app.js"></script>
+     <script src="./js/bootstrap.bundle.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

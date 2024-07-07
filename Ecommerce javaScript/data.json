@@ -1,0 +1,39 @@
+
+[
+    { "id": 1,
+    "nombre": "Hamburguesa",
+    "precio": 2000,
+    "img": "./imagenes/burguer.jpg",
+    "cantidad": 1
+},
+    { "id": 2,
+    "nombre": "Lomito",
+    "precio": 2500,
+    "img": "./imagenes/lomito.jpg",
+    "cantidad": 1
+},
+    { "id": 3,
+    "nombre": "Pizza",
+    "precio": 1500,
+    "img": "./imagenes/pizza.jpg",
+    "cantidad": 1
+},
+    { "id": 4,
+    "nombre": "Papas",
+    "precio": 500,
+    "img": "./imagenes/papas.png",
+    "cantidad": 1
+},
+    { "id": 5,
+    "nombre": "Pancho",
+    "precio": 800,
+    "img": "./imagenes/pancho.jpg",
+    "cantidad": 1
+},
+    { "id": 6,
+    "nombre": "Gaseosa",
+    "precio": 1000,
+    "img": "./imagenes/gaseosa.jpg",
+    "cantidad": 1
+}
+]
